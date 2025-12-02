@@ -1,0 +1,224 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>My Portfolio</title>\
+    <style>\
+        /* --- CSS VARIABLES & RESET --- */\
+        :root \{\
+            --bg-color: #121212;\
+            --card-bg: #1e1e1e;\
+            --text-main: #e0e0e0;\
+            --text-muted: #a0a0a0;\
+            --accent: #00d4ff;\
+            --accent-hover: #00a3cc;\
+            --input-bg: #2a2a2a;\
+        \}\
+\
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\
+        \}\
+\
+        body \{\
+            background-color: var(--bg-color);\
+            color: var(--text-main);\
+            line-height: 1.6;\
+        \}\
+\
+        a \{ text-decoration: none; color: inherit; transition: 0.3s; \}\
+        ul \{ list-style: none; \}\
+\
+        /* --- LAYOUT UTILITIES --- */\
+        .container \{\
+            max-width: 1100px;\
+            margin: 0 auto;\
+            padding: 0 20px;\
+        \}\
+\
+        section \{ padding: 60px 0; \}\
+\
+        h2 \{\
+            font-size: 2rem;\
+            margin-bottom: 20px;\
+            border-left: 5px solid var(--accent);\
+            padding-left: 15px;\
+        \}\
+\
+        /* --- HEADER & NAV --- */\
+        header \{\
+            background-color: rgba(18, 18, 18, 0.95);\
+            position: fixed;\
+            width: 100%;\
+            top: 0;\
+            z-index: 1000;\
+            border-bottom: 1px solid #333;\
+        \}\
+\
+        nav \{\
+            display: flex;\
+            justify-content: space-between;\
+            align-items: center;\
+            height: 70px;\
+        \}\
+\
+        .logo \{\
+            font-size: 1.5rem;\
+            font-weight: bold;\
+            color: var(--accent);\
+        \}\
+\
+        .nav-links \{ display: flex; gap: 20px; \}\
+        .nav-links a:hover \{ color: var(--accent); \}\
+\
+        /* --- HERO SECTION --- */\
+        .hero \{\
+            height: 100vh;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            text-align: center;\
+            padding-top: 70px;\
+        \}\
+\
+        .hero h1 \{ font-size: 3.5rem; margin-bottom: 10px; \}\
+        .hero span \{ color: var(--accent); \}\
+        .hero p \{\
+            font-size: 1.2rem;\
+            color: var(--text-muted);\
+            max-width: 600px;\
+            margin: 0 auto 30px;\
+        \}\
+\
+        .btn \{\
+            display: inline-block;\
+            padding: 12px 30px;\
+            background-color: var(--accent);\
+            color: #000;\
+            font-weight: bold;\
+            border-radius: 5px;\
+            border: none;\
+            cursor: pointer;\
+            font-size: 1rem;\
+        \}\
+\
+        .btn:hover \{\
+            background-color: var(--accent-hover);\
+            transform: translateY(-2px);\
+        \}\
+\
+        /* --- SKILLS SECTION --- */\
+        .skills-grid \{\
+            display: flex;\
+            flex-wrap: wrap;\
+            gap: 15px;\
+            margin-top: 20px;\
+        \}\
+\
+        .skill-tag \{\
+            background-color: #333;\
+            padding: 8px 16px;\
+            border-radius: 20px;\
+            font-size: 0.9rem;\
+        \}\
+\
+        /* --- PROJECTS GRID --- */\
+        .projects-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+            gap: 30px;\
+            margin-top: 40px;\
+        \}\
+\
+        .project-card \{\
+            background-color: var(--card-bg);\
+            border-radius: 10px;\
+            overflow: hidden;\
+            transition: transform 0.3s;\
+            border: 1px solid #333;\
+        \}\
+\
+        .project-card:hover \{\
+            transform: translateY(-5px);\
+            border-color: var(--accent);\
+        \}\
+\
+        .card-image \{\
+            width: 100%;\
+            height: 200px;\
+            background-color: #333;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            color: #555;\
+        \}\
+\
+        .card-content \{ padding: 20px; \}\
+        .card-content h3 \{ margin-bottom: 10px; \}\
+        .card-content p \{\
+            color: var(--text-muted);\
+            font-size: 0.95rem;\
+            margin-bottom: 15px;\
+        \}\
+        .card-link \{ color: var(--accent); font-weight: bold; font-size: 0.9rem; \}\
+\
+        /* --- CONTACT FORM --- */\
+        .contact-form \{\
+            max-width: 600px;\
+            margin-top: 20px;\
+        \}\
+\
+        .form-group \{\
+            margin-bottom: 20px;\
+        \}\
+\
+        .form-group label \{\
+            display: block;\
+            margin-bottom: 8px;\
+            color: var(--text-main);\
+        \}\
+\
+        .form-group input,\
+        .form-group textarea \{\
+            width: 100%;\
+            padding: 12px;\
+            background-color: var(--input-bg);\
+            border: 1px solid #333;\
+            border-radius: 5px;\
+            color: white;\
+            font-size: 1rem;\
+        \}\
+\
+        .form-group input:focus,\
+        .form-group textarea:focus \{\
+            outline: none;\
+            border-color: var(--accent);\
+        \}\
+\
+        /* --- FOOTER --- */\
+        footer \{\
+            text-align: center;\
+            padding: 40px 0;\
+            background-color: #0a0a0a;\
+            color: var(--text-muted);\
+            margin-top: 60px;\
+            border-top: 1px solid #333;\
+        \}\
+\
+        @media (max-width: 768px) \{\
+            .hero h1 \{ font-size: 2.5rem; \}\
+            .nav-links \{ display: none; \}\
+        \}\
+    </style>\
+</head>\
+</html>}
